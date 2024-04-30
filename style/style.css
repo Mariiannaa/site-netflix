@@ -1,0 +1,80 @@
+#Logo{
+    width: 200px;
+}
+header{
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+nav{
+    width: 100%;
+}
+a{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+a:hover{
+    color:red;
+}
+body{
+    margin: 0%;
+    background-color: #1c1c1c;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    background-image:url(1116332428-5f6aaa2a8080e887e805b044c7090225.jpeg);
+    background: linear-gradient(to right,rgb(0,0,0,1),rgb(0,0,0,0.1)),url(1116332428-5f6aaa2a8080e887e805b044c7090225.jpeg);
+    background-size: cover;
+
+}
+
+texto{
+    text-align: justify;
+    margin-top: 5px;
+    display: flex;
+    width:300px;
+
+}
+main{
+    height: 600px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+#tit{
+    font-size: 70px;
+}
+button{
+    width: 150px;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    color: red;
+
+}
+#film-recomend{
+    display: flex;
+}
+
+#recomendacao{
+    margin-top: 50px;
+}
+
+#recomendacao h1{
+    margin: 0%;
+}
+
+#film-recomend img{
+    width: 200px;
+    margin: 10px;
+}
+
+#film-recomend img:hover{
+    width: 250px;
+    transition-duration: 0.2s;
+}
+

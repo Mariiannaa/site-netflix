@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href="img/netflixicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/login.css">
+</head>
+<body>
+    <header>
+            <img id="Logo" src="img/netflixlogo.png" alt="LOGO NETFLIX">
+    </header>
+    <main>
+    <form action="">
+        
+        <h1>Entrar</h1>
+        <input class="login-input" type="text" id="login" placeholder=" Email ou número de telefone">
+        <p class="alerta" hidden>⚠ Este campo não pode estar vazio.</p>
+        <input class="login-input" type="password" name="senha" id="senha" placeholder="Senha"><br>
+        <p class="alerta" hidden>⚠ Preencha sua senha.</p>
+        <input type="button" value="Entrar" id="botao" onclick="entrar()">
+        
+        <div id="help">
+            <div>
+                <input type="checkbox" name="Lembrar-se">
+                <label for="Lembrar-se">Lembre de mim</label>
+            </div>
+            <a href="#">Precisa de ajuda?</a>
+        </div>
+    </form>
+        </main>
+</body>
+<script>
+    var login = document.getElementById('login');
+    var senha = document.getElementById('senha');
+    var alerta = document.getElementsByClassName('alerta');
+
+    var usuario_login = 'Joran'
+    var usuario_senha = '1234'
+
+    login.addEventListener("input", ()=>{
+        if(login.value !=''){
+            alerta[0].setAttribute('hidden','');
+            login.style.marginBottom = '10px';
+        }
+    })
+
+    senha.addEventListener("input", ()=>{
+        if(senha.value !=''){
+            alerta[1].setAttribute('hidden','');
+            senha.style.marginBottom = '10px';
+        }
+    })
+
+    function entrar(){
+        if(login.value == ''){
+            alerta[0].removeAttribute('hidden');
+            login.style.marginBottom = '0%';
+        }else if(senha.value == ''){
+                alerta[1].removeAttribute('hidden');
+                senha.style.marginBottom = '0%';
+            }else if(login.value == usuario_login && senha.value == usuario_senha){
+                window.open('index.html');
+            }else{
+                alerta[0].removeAttribute('hidden');
+                alerta[0].innerHTML = 'Usuário ou senha incorreto!';
+            }
+        }
+</script>
+</html>
